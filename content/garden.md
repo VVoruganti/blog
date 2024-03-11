@@ -17,7 +17,7 @@ with. Eventually want to consolidate my bookmarks to make something like
 
 # Reading
 
-Currently reading: Dawn of Yangchen by F. C. Yee
+Currently reading: Ghost in the Wires
 
 # Want to learn
 

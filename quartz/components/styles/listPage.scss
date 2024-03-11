@@ -21,10 +21,12 @@ li.section-li {
 
     & > .desc > h3 > a {
       background-color: transparent;
+      margin-left: 1rem;
     }
 
     & > .meta {
       margin: 0;
+      /* padding-right: 0.1rem; */
       flex-basis: 6em;
       opacity: 0.6;
     }

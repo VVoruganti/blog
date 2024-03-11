@@ -1,7 +1,6 @@
 --- 
 title: Backing Up Personal Files with rclone
 date: 2023-08-19
-tags: ['post'] 
 ---
 
 <!-- Excerpt Start -->

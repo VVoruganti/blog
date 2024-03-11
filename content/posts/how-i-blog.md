@@ -1,7 +1,6 @@
 ---
 title: How I Setup My Blog
 date: 2022-09-18
-tags: ["post"]
 ---
 
 Since that [[why-i-blog | last post]] there have been a lot of changes

@@ -32,7 +32,7 @@ TagList.css = `
   padding-left: 0;
   gap: 0.4rem;
   margin: 1rem 0;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-self: end;
 }
 

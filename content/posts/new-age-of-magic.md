@@ -1,7 +1,6 @@
 --- 
 title: A New Age of Magic
 date: 2023-09-16
-tags: ['post'] 
 ---
 
 I first came across this quote in a great talk from the Software You Can Love
