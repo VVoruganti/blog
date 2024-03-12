@@ -48,7 +48,7 @@ to get an **Account ID** and **Master Application Key**.
 I went to [Backblaze](https://www.backblaze.com/cloud-storage) and created an account for
 B2 Cloud Storage. After signing go ahead and make a bucket. 
 
-![rclone b2 bucket creation button](/static/images/rclone-b2-create-bucket-button.png)
+![[assets/rclone-b2-create-bucket-button.png]]
 
 > **You can make buckets using rclone too, but when you make a application key you
 > can scope it down to specific buckets. So for security's sake I made a bucket
@@ -58,18 +58,18 @@ From the dialog window enter a name for the bucket and follow the remaining
 prompts. **Note** you cannot rename the bucket once it is created. I also made
 it private and enabled encryption.
 
-![rclone b2 bucket creation](/static/images/rclone-b2-bucket-creation.png)
+![[assets/rclone-b2-bucket-creation.png]]
 
 Hit create and head over to **Application Keys** under **Account** on the
 sidebar. 
 
-![rclone b2 account key section](/static/images/rclone-b2-account-section.png)
+![[assets/rclone-b2-account-section.png]]  
 
 From there press **Add a New Application Key** and follow the prompts to get
 your key. The KeyID corresponds to the `Account ID` in `rclone config`, and the
 `applicationKey` field corresponds to `key` in `rclone config`
 
-![rclone b2 key](/static/images/rclone-b2-key.png)
+![[assets/rclone-b2-key.png]]  
 
 Once you have your key run `rclone config` and follow the prompts to set up a
 new remote. Once you're done run `rclone listremotes` and confirm tht you see
@@ -89,7 +89,7 @@ browser.
 rclone rcd --rc-web-gui
 ```
 
-![rclone web gui](/static/images/rclone-web-gui.png)
+![[assets/rclone-web-gui.png]]
 
 From the main page head to the **explorer** tab and enter the name of your
 remote from the `rclone config` step. Now you can use rclone as an intermediary

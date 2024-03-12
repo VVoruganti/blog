@@ -10,7 +10,8 @@ export const sharedPageComponents: SharedLayout = {
     links: {
       GitHub: "https://github.com/VVoruganti/blog",
       LinkedIn: "https://www.linkedin.com/in/vineethvoruganti/",
-      Twitter: "https://twitter.com/TheMarshmalon"
+      Twitter: "https://twitter.com/TheMarshmalon",
+      RSS: "/index.xml"
     },
   }),
 }
