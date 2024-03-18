@@ -3,6 +3,9 @@ title: How I Setup My Blog
 date: 2022-09-18
 ---
 
+> The content in this post is now out of date. See [[colophon]] for an
+> [[tags/evergreen | evergreen]] version.
+
 Since that [[why-i-blog | last post]] there have been a lot of changes
 in how my blog has been looking. Originally I was using
 [bearblog](https://bearblog.dev) but since then their terms and conditions
