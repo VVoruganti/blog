@@ -37,3 +37,11 @@ From there notes have two different paths. Thoughts that are closer to prose and
 include original thoughts are turned into [[posts]] while notes that are closer
 to reference pages are tagged as [[tags/evergreen | evergreen]]. Evergreen notes
 present a completed idea, but can be updated with new content. 
+
+[tags/review | Reviews] are notes and synthesis from reading some other piece of
+content. Could be a tutorial, blog posts, book, etc. These can turn into posts
+as well
+
+[tags/pattern | Patterns] are repeatable design patterns that I've found helpful
+when working on projects are can be reference sheets for different tools and
+platforms. These generally will also be evergreen notes.

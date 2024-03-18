@@ -1,7 +1,7 @@
 ---
 title: Goodbye React UseEffect
 date: 10-05-2023
-tags: ["review", "dev"]
+tags: ["seed", "review", "dev"]
 ---
 
 Based on the content in 
