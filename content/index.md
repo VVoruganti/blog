@@ -7,6 +7,10 @@ I'm Vineeth, also go by **marshmalon** online.
 Currently, a Founder @ [Plastic Labs](https://plasticlabs.ai). Like to spend
 my time reading about **Game Design**, **DevSecOps**, and **Blockchain**
 
+I care a lot about **Mental Health**, and I'm trying to remove the stigma about
+being open about it. Despite what my peers may say Mental Health is real and
+important to take care of.
+
 Using this as a space to put down my thoughts and experiments. Updated every
 once in a while, no real pattern or cadence.
 
