@@ -28,3 +28,25 @@ To bring down the service just make the number 0
 ```bash
 fly scale count {num} -a {app name} -g {process group}
 ```
+
+## Machines vs Apps
+
+As of the editing of this cheatsheet there is not full feature parity with the
+the fly apps platform and machines API. This became apparent to me when I was
+trying to set the restart policy of a machine. This is not possible from the
+`fly.toml` and instead I need to use the machines api to change the
+configuration of a specific machine. 
+
+I found this from this [thread](https://community.fly.io/t/how-do-i-change-the-restart-policy-for-machines/7341)
+
+Use this `fly machine update` to change created machines after launching an app.
+
+[Fly Machine Update Docs](https://fly.io/docs/machines/flyctl/fly-machine-update/)
+[Fly Machine update Reference](https://fly.io/docs/flyctl/machine-update/)
+
+
+To view the configuration of a specific machine run
+
+```bash
+fly machine status {id} -a {app-name} -d
+```
