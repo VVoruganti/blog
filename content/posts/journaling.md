@@ -1,20 +1,20 @@
---- 
+---
 title: Journaling with Neovim to Manage my Mind
 date: 2023-12-21
-tags: ["mental health"]
+tags: ["mental health", "neovim"]
 ---
 
 For those of you who know me one of the things I'm open about is my
 struggle with my mental health. I tweet about it pretty often and don't like to
 shy away from talking about therapy or medication. My mental health issues
-usually manifest as depression and anxiety. 
+usually manifest as depression and anxiety.
 
 One of the symptoms I face is when I particularly stressed or having an episode
 is my thoughts start to race at an alarming rate. This can be as simple as being
 unable to focus on one thing and constantly context switching so that nothing
 gets done to just going down deep thought loops that are assumptions built on
 assumptions that just make me feel bad. It affects my productivity quite a bit
-and can lead to really bad downward spiral. 
+and can lead to really bad downward spiral.
 
 Over the years I've gotten a bit better about managing my emotions when I reach
 this state. Being able to talk out and unpack my thoughts is the key for me —
@@ -29,7 +29,7 @@ journal for a bit to get everything I was thinking on paper and then once I was
 satisfied I could go back to sleep a lot easier. The problem with journaling by
 hand for me was that I really wasn't able to write as fast as my brain was
 moving. Still it was better than nothing and a drastic improvement from having
-nothing. 
+nothing.
 
 Recently, I switched jobs to one that has me doing a lot more development work
 and with that I've been having a terminal window open pretty much permanently.
@@ -39,7 +39,7 @@ help me organize everything and get to work a lot faster. I'm a massive vim fan
 and at this point struggle with using other text editors because I can't achieve
 the same speed. That was the key, the speed I can open and manipulate text in
 vim was unparalleled and immediately it became clear to me that this was the
-best tool I could use to completely unpack my thoughts. 
+best tool I could use to completely unpack my thoughts.
 
 I'm also a pretty big personal knowledge management nerd, being that one person
 in a friend group who tries every new productivity app. From that I've become
@@ -66,7 +66,7 @@ today () {
 I just get the current date and make a copy of a journal template I made then
 open it with neovim. The template is also quite simple. It contains a section
 for my daily todo items, a section for thoughts, and a reflection section that I
-fill out at the end of the day. Below is a markdown example of this. 
+fill out at the end of the day. Below is a markdown example of this.
 
 ```md
 # Date
@@ -78,7 +78,6 @@ fill out at the end of the day. Below is a markdown example of this.
 ## Thoughts
 
 ## Reflection
-
 ```
 
 ## Conclusions
@@ -87,7 +86,7 @@ I've been using this workflow for about a month now, and it has been incredible
 how much better I have been at staying grounded on my tasks and not losing time
 to random context switching. It's also very accessible since I always have a
 terminal window open anyways for whatever reason and searchability is great with
-[ripgrep](https://github.com/BurntSushi/ripgrep) available. 
+[ripgrep](https://github.com/BurntSushi/ripgrep) available.
 
 Turns out I didn't need all the bells and whistles available in other PKM tools
 like notion or even obsidian. The speed and ease of access of just using vim has

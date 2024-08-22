@@ -1,7 +1,7 @@
 ---
 title: Yet Another Neovim Setup Guide — 2024 Edition
 date: 06.16.2024
-tags: ["dev", "guide"]
+tags: ["dev", "guide", "neovim"]
 ---
 
 > The code and configuration associated with this post is available on
@@ -24,7 +24,7 @@ success... There were some plugins that I wanted that weren't in LunarVim and
 when I wanted to further customize stuff I had to use their config format.
 However, it was still not too bad and better than the sometimes nightly practice
 of fine-tuning. That was all until my copilot stopped working for me after an
-update. 
+update.
 
 I've been using [codeium.vim](https://codeium.com/) for my co-pilot in neovim
 since early on when stuff like [GitHub
@@ -32,7 +32,7 @@ Copilot](https://github.com/github/copilot.vim) was announced and it just wasn't
 working after a random `LvimUpdate`. I figured this is something I messed up and
 broke so I needed to figure out what part of my setup is breaking down. In this
 process I ended up just deciding, ok I should just redo my setup and properly
-document it this time. 
+document it this time.
 
 > [!NOTE]
 > Turns out wasn't my fault there was just a [problem with
@@ -55,7 +55,7 @@ brew install neovim
 ```
 
 The only other prerequisite I installed was `ripgrep` for making file searching
-faster. 
+faster.
 
 ```bash
 brew install ripgrep
@@ -76,27 +76,28 @@ Below is an incomplete snapshot of the directory structure for my config files.
 ```markdown
 .
 └── .config/
-    └── nvim/
-        ├── init.lua
-        ├── lua/
-        │   └── marshmalon/
-        │       ├── lazy/
-        │       └── init.lua
-        └── after/
-            └── ftplugin/
+└── nvim/
+├── init.lua
+├── lua/
+│ └── marshmalon/
+│ ├── lazy/
+│ └── init.lua
+└── after/
+└── ftplugin/
 ```
 
 Everything starts with the `init.lua` in `.config/nvim`. This is the entrypoint
 for the config. Some older guides may use an `init.vim` for backwards
 compatibility, but I wanted my entire config to be in lua so I wouldn't need to
-figure out any VimScript. 
+figure out any VimScript.
 
 Then there is the `lua` folder that holds all of the remaining configurations.
 The `lua/` folder is special because anything in there is requirable. In fact
 all of the setup is done in this folder. The `.config/nvim/init.lua` file just
-requires the `marshmalon` module. 
+requires the `marshmalon` module.
 
 **init.lua**
+
 ```lua
 require("marshmalon")
 ```
@@ -117,10 +118,10 @@ the setup and configuration for plugins installed using the
 Before we can start using fancy plugins and getting a really slick experience we
 need to setup a package manager. As I mentioned in the last section I'm using
 Lazy, but there are a number of older manages such as `packer` and `vim-plug`
-that are still used and referenced in documenation for plugins. 
+that are still used and referenced in documenation for plugins.
 
 From the [Lazy Setup Docs](https://lazy.folke.io/installation) I use the single
-file setup to get started. 
+file setup to get started.
 
 Under `marshmalon/` I have a file called `lazy_init.lua` with the following
 contents:
@@ -147,16 +148,17 @@ require("lazy").setup({
 
 This will clone the package manager if it isn't already installed and set the
 location for plugin definitions to be the `.config/nvim/lua/marshmalon/lazy/`
-folder. 
+folder.
 
 Before that works we need to update our `marshmalon/init.lua` file to include
-it. 
+it.
 
 ```lua
 vim.g.mapleader = " " -- Set leader key before Lazy
 
 require("marshmalon.lazy_init")
 ```
+
 Lazy needs a leader key to defined before it is loaded so I run that before
 everything else and set the leader to a spacebar press.
 
@@ -169,19 +171,19 @@ below (without any additional plugins).
 ## Plugins
 
 Now we can get into the different plugins I used. Below is a list of
-the different plugins I setup. 
+the different plugins I setup.
 
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim) — Fuzzy file finder using ripgrep
 - [today.nvim](https://github.com/VVoruganti/today.nvim) — A daily journaling plugin
-- [tokyonight.nvim](https://github.com/folke/tokyonight.nvim)  — Colorscheme
-- [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)  — Language Server Protocol Configurations
-    - [mason.nvim](https://github.com/williamboman/mason.nvim) — Manages language servers 
-    - [mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig) — Manages language servers
-    - [cmp-buffer](https://github.com/hrsh7th/cmp-buffer) — completion source
-    - [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp) — completion source
-    - [cmp-path](https://github.com/hrsh7th/cmp-path) — completion source
-    - [LuaSnip](https://github.com/L3MON4D3/LuaSnip) — snippets
-    - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) — completion engine
+- [tokyonight.nvim](https://github.com/folke/tokyonight.nvim) — Colorscheme
+- [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) — Language Server Protocol Configurations
+  - [mason.nvim](https://github.com/williamboman/mason.nvim) — Manages language servers
+  - [mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig) — Manages language servers
+  - [cmp-buffer](https://github.com/hrsh7th/cmp-buffer) — completion source
+  - [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp) — completion source
+  - [cmp-path](https://github.com/hrsh7th/cmp-path) — completion source
+  - [LuaSnip](https://github.com/L3MON4D3/LuaSnip) — snippets
+  - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) — completion engine
 - [codeium.vim](https://github.com/Exafunction/codeium.vim) — GitHub Co-pilot alternative
 - [lazy.nvim](https://github.com/folke/lazy.nvim) — Plugin Manager
 - [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) — configurable statusline
@@ -204,6 +206,7 @@ For each plugin I made a corresponding file under
 is an example for [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 
 **.config/nvim/lua/marshmalon/lazy/treesitter.lua**
+
 ```lua
 return {
   "nvim-treesitter/nvim-treesitter",
@@ -248,18 +251,18 @@ least recommend the following
 The Language Server Protocol (LSP) is a very powerful tool that is built-in to
 neovim and can be used for diagnostics, code completion, and more. To utilize it
 when coding you need a corresponding language server. Each language will have
-different ones with different capabilities. 
+different ones with different capabilities.
 
 To manage this I recommend using [Mason](https://github.com/williamboman/mason.nvim) a package manager
 for language servers in neovim.
 
 There are several ways to go about setting up the LSP. One popular way is to use
 the [LSP Zero](https://lsp-zero.netlify.app) plugin that provides a lot of
-sane defaults. 
+sane defaults.
 
 I did all of my LSP setup in a plugin definition under `.config/nvim/lua/marshmalon/lazy/lsp.lua`. In that file I also
 setup the `nvim-cmp` plugin for managing autocompletions and set up several
-sources for the completion including the language servers themselves. 
+sources for the completion including the language servers themselves.
 
 ## Miscellaneous Settings
 
@@ -270,6 +273,7 @@ to configure any other defaults of the editor. I have two files for this.
 - `remap.lua` — for managing my custom keybindings
 
 **Set.lua**
+
 ```lua
 vim.cmd.colorscheme("tokyonight")
 
@@ -293,17 +297,18 @@ vim.opt.termguicolors = true
 ```
 
 This is a smaller file that sets various defaults for neovim such as tab
-size, line numbering, and clipboard configuration. 
+size, line numbering, and clipboard configuration.
 
 For managing my keybindings I used a plugin called
 [which-key](https://github.com/folke/which-key.nvim) that let's me annotate,
 organize, and create a small dialog window at the bottom that tells me what
-different keys will do. Very helpful for when I forget a key binding. 
+different keys will do. Very helpful for when I forget a key binding.
 
 My `remap.lua` file is rather long and has many comments but to illustrate how
 it works I put a small snippet from it below
 
 **Remap.lua snippet**
+
 ```lua
 local which_key = require("which-key")
 local non_lsp_mappings = {
@@ -327,7 +332,7 @@ which_key.register(non_lsp_mappings)
 
 This creates several keybinds, but when entering a group (such as with
 \<leader\>) it will show a float window with all the keybinds in that group like
-so. 
+so.
 
 ![Keybinds](keybinds.png)
 
@@ -355,12 +360,13 @@ dependencies using `Lazy` and didn't hit any conflicts. The configuration I did
 make is that I have a `markdown.lua` file that sets the text width to 80.
 
 **.config/nvim/after/ftplugin/markdown.lua**
+
 ```lua
 vim.cmd("setlocal textwidth=80")
 ```
 
 This is helpful when writing so that my lines automatically wrap at 80
-characters and I don't just have lines that go forever. 
+characters and I don't just have lines that go forever.
 
 ## Conclusion
 
@@ -369,27 +375,27 @@ At the end of the setup my `.config/nvim` directory looks like so:
 ```markdown
 .
 └── .config/
-    └── nvim/
-        ├── init.lua
-        ├── lua/
-        │   └── marshmalon/
-        │       ├── lazy/
-        │       │   └── ...Many plugin specs
-        │       ├── init.lua
-        │       ├── lazy_init.lua
-        │       ├── remap.lua
-        │       └── set.lua
-        └── after/
-            └── ftplugin/
-                └── markdown.lua
+└── nvim/
+├── init.lua
+├── lua/
+│ └── marshmalon/
+│ ├── lazy/
+│ │ └── ...Many plugin specs
+│ ├── init.lua
+│ ├── lazy_init.lua
+│ ├── remap.lua
+│ └── set.lua
+└── after/
+└── ftplugin/
+└── markdown.lua
 ```
 
-Everything is configured using strictly lua with no VimScript. 
+Everything is configured using strictly lua with no VimScript.
 
 Neovim is an ever-evolving platform that can change quite fast. One day's
 plugins can be obsolete the next day, so inevitably there will be some drift and
 this guide will be dated. That being said the ecosystem has been maturing and many standards
-are becoming more cemented. 
+are becoming more cemented.
 
 I can't see myself going to another editor at this point. Anything else I try
 feels too slow and being co-located in the terminal is always nice as I'm
@@ -401,16 +407,14 @@ guides included.
 ### Further Work
 
 As I hinted to earlier just like ricing, customizing an editor can be an endless
-pursuit and just from the initial setup there are a few thins I want to work on. 
+pursuit and just from the initial setup there are a few thins I want to work on.
 
 The main one being writing my own co-pilot extension so that I have full control
 of the model and prompt architecture.
 
 ## References
 
-* [lsp-zero](https://lsp-zero.netlify.app/v3.x/)
-* [ThePrimeagen's init.lua](https://github.com/ThePrimeagen/init.lua/tree/master)
-* [Josean's 2024 Neovim Setup on Mac](https://www.josean.com/posts/how-to-setup-neovim-2024)
-* [LunarVim Plugin Setup](https://www.lunarvim.org/docs/configuration/plugins/example-configurations)
-
-
+- [lsp-zero](https://lsp-zero.netlify.app/v3.x/)
+- [ThePrimeagen's init.lua](https://github.com/ThePrimeagen/init.lua/tree/master)
+- [Josean's 2024 Neovim Setup on Mac](https://www.josean.com/posts/how-to-setup-neovim-2024)
+- [LunarVim Plugin Setup](https://www.lunarvim.org/docs/configuration/plugins/example-configurations)
