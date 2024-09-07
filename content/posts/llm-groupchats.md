@@ -1,5 +1,5 @@
 ---
-title: "Questions About LLM Group Chats"
+title: "Questions about LLMs in Group Chats"
 date: 2024.09.07
 tags: [AI, dev, side-projects]
 ---
