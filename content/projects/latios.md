@@ -1,13 +1,14 @@
 ---
 title: "Latios.nvim — A Hackable Copilot for Neovim"
-date: 2024.08.21
+date: 2024.09.08
 ---
 
 > This project can be found on
 > [GitHub](https://github.com/VVoruganti/latios.nvim)
 
-I've been working with language model applications for a while now between work
-on [tutor-gpt](https://github.com/plastic-labs/tutor-gpt) or [honcho](https://github.com/plastic-labs/honcho) and I've seen a lot of
+I've been working with language model applications for a while now, between work
+on [tutor-gpt](https://github.com/plastic-labs/tutor-gpt) or
+[honcho](https://github.com/plastic-labs/honcho). And in that time I've seen a lot of
 different methods to improve the fidelity and value of the responses from models
 like ChatGPT. Just things like adding a separate inference step where you ask
 the model to "think" about the question has really improved the results I've
@@ -23,7 +24,7 @@ just curious how it works under the hood. I figured that neovim's
 great for building the context for queries. The curiosity, my fairly often usage
 of coding assistants, and experience building applications inspired me to try
 and build my own. I'm sure this is more complicated than I'm making it out in my
-head, but I haven't seen too many implementation that mess around a lot with the
+head, but I haven't seen too many implementations that mess around a lot with the
 prompt of the copilot. From a cursory look at a lot of options they seem to just
 throw the current code file into the context window and send it to a model. So I
 wanted to mess with it more to see what things you can tune to make it better.
