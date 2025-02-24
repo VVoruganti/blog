@@ -4,7 +4,7 @@ date: 2024.09.08
 tags: ["dev", "side-projects", "AI", "neovim"]
 ---
 
-> This post is in relation to my [[latios|latios.nvim] project, which can be found on
+> This post is in relation to my [[latios|latios.nvim]] project, which can be found on
 > [GitHub](https://github.com/VVoruganti/latios.nvim).
 
 At the time of writing this post I've built a naive AI copilot as a plugin for
