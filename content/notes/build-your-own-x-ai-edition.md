@@ -54,6 +54,7 @@ implementations and tutorials.
 
 - [Awesome Deep Research](https://github.com/DavidZWZ/Awesome-Deep-Research)
 - [Open-source DeepResearch – Freeing our search agents](https://huggingface.co/blog/open-deep-research)
+- [ROMA: Recursive Open Meta-Agents](https://github.com/sentient-agi/ROMA)
 
 ## Co-pilots
 
