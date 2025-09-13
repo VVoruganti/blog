@@ -14,3 +14,8 @@ are the general purpose agent I would want.
 - https://ampcode.com/manual
 - https://docs.anthropic.com/en/docs/claude-code/overview
 - https://aider.chat/
+- https://github.com/QwenLM/qwen-code
+- https://github.com/charmbracelet/crush
+- https://cursor.com/en/CLI
+- https://opencode.ai/
+- https://github.com/Danau5tin/multi-agent-coding-system
