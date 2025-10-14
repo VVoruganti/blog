@@ -1,7 +1,7 @@
 ---
 title: "Build Your Own X: AI Edition"
 date: 2025-09-12
-tags: [ai, dev, seed]
+tags: [AI, dev, seed]
 ---
 
 Project based learning has always been my gold standard for learning
