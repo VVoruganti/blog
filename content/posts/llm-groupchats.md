@@ -304,3 +304,4 @@ behavior of the individual agents.
 
 - [Project Sid](https://github.com/altera-al/project-sid/tree/main)
 - [Tiny Troupe](https://github.com/microsoft/TinyTroupe)
+- [Swarms](https://github.com/kyegomez/swarms)
